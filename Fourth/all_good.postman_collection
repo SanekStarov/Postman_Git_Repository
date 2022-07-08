@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "09966bfe-6ba6-4377-8305-566c805f1427",
+		"name": "Отличные наличные",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17894354"
+	},
+	"item": [
+		{
+			"name": "Отправка нового пользователя",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Проверка на статус код 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Ответ меньше, чем за 400 мс\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(10000);\r",
+							"});\r",
+							"pm.test(\"Успешный POST запрос\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 202]);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "data",
+							"value": "{\n  \"id\": \"5544\",\n  \"first_name\": \"{{firstname}}\",\n  \"last_name\": \"{{lastname}}\",\n  \"middle_name\": \"{{middlename}}\",\n  \"birthday\": \"01011990\",\n  \"phone\": \"79101231232\",\n  \"residential_city\": \"Калуга\",\n  \"amount\": \"25000\",\n  \"period\": \"30\",\n  \"utm_source\": \"xclicks\",\n  \"utm_medium\": \"pc_api.cpss\",\n  \"utm_campaign\": \"offline_pdl_onset_{213213}\",\n  \"utm_content\": \"123\",\n  \"utm_term\": \"222\",\n  \"email\": \"test@mail.ru\"\n}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://cpa.otlnal.ru/v1/",
+					"protocol": "https",
+					"host": [
+						"cpa",
+						"otlnal",
+						"ru"
+					],
+					"path": [
+						"v1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Повторный пользователь",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Проверка на статус код 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Ответ меньше, чем за 400 мс\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(10400);\r",
+							"});\r",
+							"pm.test(\"Успешный POST запрос\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 202]);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "data",
+							"value": "{\n  \"id\": \"5544\",\n  \"first_name\": \"{{firstname}}\",\n  \"last_name\": \"{{lastname}}\",\n  \"middle_name\": \"{{middlename}}\",\n  \"birthday\": \"01011990\",\n  \"phone\": \"79101231232\",\n  \"residential_city\": \"Калуга\",\n  \"amount\": \"25000\",\n  \"period\": \"30\",\n  \"utm_source\": \"xclicks\",\n  \"utm_medium\": \"pc_api.cpss\",\n  \"utm_campaign\": \"offline_pdl_onset_{213213}\",\n  \"utm_content\": \"123\",\n  \"utm_term\": \"222\",\n  \"email\": \"test@mail.ru\"\n}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://cpa.otlnal.ru/v1/",
+					"protocol": "https",
+					"host": [
+						"cpa",
+						"otlnal",
+						"ru"
+					],
+					"path": [
+						"v1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ошибки в номере телефона",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Проверка на статус код 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Ответ меньше, чем за 400 мс\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(10400);\r",
+							"});\r",
+							"pm.test(\"Успешный POST запрос\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 202]);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "data",
+							"value": "{\n  \"id\": \"5544\",\n  \"first_name\": \"{{firstname}}\",\n  \"last_name\": \"{{lastname}}\",\n  \"middle_name\": \"{{middlename}}\",\n  \"birthday\": \"01011990\",\n  \"phone\": \"79101231232\",\n  \"residential_city\": \"Калуга\",\n  \"amount\": \"25000\",\n  \"period\": \"30\",\n  \"utm_source\": \"xclicks\",\n  \"utm_medium\": \"pc_api.cpss\",\n  \"utm_campaign\": \"offline_pdl_onset_{213213}\",\n  \"utm_content\": \"123\",\n  \"utm_term\": \"222\",\n  \"email\": \"test@mail.ru\"\n}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://cpa.otlnal.ru/v1/",
+					"protocol": "https",
+					"host": [
+						"cpa",
+						"otlnal",
+						"ru"
+					],
+					"path": [
+						"v1",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

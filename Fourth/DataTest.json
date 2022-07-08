@@ -1,0 +1,13 @@
+[
+	{
+		"firstname" : "Александр",
+		"lastname" : "Тестов",
+		"middlename" : "Тестович"
+	},
+	{
+		"firstname" : "Анастасия",
+		"lastname" : "Тестова",
+		"middlename" : "Тестовна"
+	}
+
+]
